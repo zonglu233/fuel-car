@@ -1,0 +1,64 @@
+.creator_table_cell{
+	flex-wrap: wrap;
+	flex-direction: row;
+
+	.slds-truncate{
+		& > a:not(:last-of-type):after {
+			content: ",";
+		}
+	}
+	.cell-container {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1;
+		// width: calc(~ "100% - 1.75rem");
+		.fulltex {
+			margin-right: 10px;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			word-wrap: break-word;
+			word-break: break-all;
+			white-space: normal;
+			overflow: hidden;
+		}
+		.cellGridContainer {
+			border: 1px solid #ddd;
+			border-bottom: none;
+
+			td {
+				padding-left: 7px !important;
+			}
+
+			.dx-data-row {
+				td {
+					line-height: 25px;
+				}
+			}
+		}
+	}
+	.editor-preview-side {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 1;
+		padding: 0;
+		// width: 100%;
+		height: auto !important;
+		position: inherit;
+		background: transparent;
+		display: block;
+		border: none;
+	}
+	.slds-button {
+		margin-right: 0;
+		flex: 0;
+	}
+}
+
+#creator-quick-form{
+	.cell-container{
+		.fulltex{
+			white-space: pre-line;
+		}
+	}
+}
